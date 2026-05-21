@@ -1,0 +1,48 @@
+Run cmd
+python
+    python3 filename.py
+pytest
+    pytest tests/test_patient.py -> single file
+    python3 runtest.py tests/filename.py -> single file with one folder create in reports and store output html file
+    
+Conftest file
+    Chrome call 
+        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+        driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
+    execution in single or multiple
+        @pytest.fixture(scope="class") -> single 
+        @pytest.fixture(scope="class", params=["chrome", "firefox"]) -> multiple
+    confest file setup call in testfile.py
+        @pytest.mark.usefixtures("setup")
+Webdriver wait
+    wait = WebDriverWait(driver, 10) 
+    wait.until(EC.invisibility_of_element_located((By.CLASS_NAME, "site-preloader")))
+    wait.until(EC.visibility_of_element_located((By.ID, "username")))
+    wait.until(EC.presence_of_element_located((By.ID, "username")))
+    wait.until(EC.element_to_be_clickable((By.ID, "loginBtn")))
+    wait.until(EC.text_to_be_present_in_element((By.ID, "message"), "Success"))
+    wait.until(EC.frame_to_be_available_and_switch_to_it((By.ID, "frame1")))
+    
+
+Pytest project Skeleton
+
+projects
+| 
+Confetestfile.py
+|
+Common
+    | 
+    common_import_py
+Pages
+    |
+    base_page.py
+Tests
+    |
+    loginpage.py
+runtest.py 
+Reports
+
+
+
+    
+    
