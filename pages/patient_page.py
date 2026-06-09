@@ -17,7 +17,7 @@ class Patient:
         self.driver.find_element(By.CSS_SELECTOR, ".btn.btn-danger.action-btn.dropdown-toggle").click()
         self.driver.find_element(By.ID, "qk_RegPat").click()
 
-    def fill_patient_details(self, phone, title, first_name, dob, age, gender, city):
+    def fill_patient_details(self, phone, title,first_name, dob, age, gender, city):
         self.driver.find_element(By.ID, "phone_no").send_keys(phone)
         self.driver.find_element(By.ID, "select2-usr_prefix-container").click()
         self.driver.find_element(By.CLASS_NAME, "select2-search__field").send_keys(title)
