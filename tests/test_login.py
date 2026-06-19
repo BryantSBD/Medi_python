@@ -8,6 +8,6 @@ from pages.login_page import Login
 class TestLogin:
     def test_login_success(self):
         login_page = Login(self.driver)
-        heading = login_page.do_login("7567546456", "789987")
+        heading = login_page.do_login("7567546456", "789981")
         assert "Dashboard" in heading
         
