@@ -19,15 +19,15 @@ class TestPatient:
     def test_patient_details(self):
         patient = Patient(self.driver)
         patient.fill_patient_details(
-            "8047023202",
+            "8047020202",
             "Mr",
-            "Babu",
-            "01/02/1993",
+            "Bharathan",
+            "01/02/1992",
             "55",
             "male",
             "Sivakasi",
         )
-        patient.verify_patient_saved("Babu")
+        patient.verify_patient_saved("Bharathan")
 
 
 
