@@ -21,7 +21,7 @@ class TestPatient:
         patient.fill_patient_details(
             "8040020202",
             "Mr",
-            "BnuRaj",
+            "BanuRaj",
             "01/02/1990",
             "55",
             "male",
